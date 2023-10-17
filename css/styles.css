@@ -18,3 +18,9 @@ body.dark{
     --text-color: hsl(0, 0%, 83%);
     --bg-color: hsl(0, 0%, 15%);
 }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
