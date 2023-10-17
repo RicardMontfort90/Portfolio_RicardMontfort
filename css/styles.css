@@ -3,3 +3,18 @@
     --text-color: hsl(0, 0%, 31%);
     --bg-color: hsl(0, 0%, 90%);
 }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark{
+    --text-color: hsl(0, 0%, 83%);
+    --bg-color: hsl(0, 0%, 15%);
+}
