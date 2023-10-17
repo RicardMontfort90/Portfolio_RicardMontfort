@@ -18,5 +18,5 @@ toggleTheme.addEventListener("click", () => {
 });
 
 toggleColors.addEventListener("click", (e) => {
-    rootStyles.setProperty("--primary-color", e.target.dataset);
+    rootStyles.setProperty("--primary-color", e.target.dataset.color);
 });
