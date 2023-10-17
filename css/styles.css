@@ -36,18 +36,18 @@ body.dark {
     justify-content: space-between;
 }
 
-.toogle-theme {
+.toggle-theme {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-.toogle-theme__icon {
+.toggle-theme__icon {
     margin-right: 0.5em;
     width: 20px;
 }
 
-.toogle-theme__text {
+.toggle-theme__text {
     font-size: 0.8rem;
 }
