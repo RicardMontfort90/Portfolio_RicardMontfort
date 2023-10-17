@@ -1,1 +1,5 @@
-
+:root{
+    --primary-color: hsl(214, 87%, 56%); 
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: hsl(0, 0%, 90%);
+}
