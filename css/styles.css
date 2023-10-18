@@ -7,8 +7,6 @@
     --transition: color 0.9s ease-in-out, background-color 0.9s ease-in-out;
 }
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -130,3 +128,29 @@ body.dark {
     overflow: hidden; 
 }
 
+.card__header {
+    padding: 1em 0;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.card__subtitle {
+    font-size: .9rem;
+    opacity: 0.9;
+}
+
+.card__link {
+    margin-bottom: 0.5em;
+}
+
+.card__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.icon {
+    margin-right: 0.8em;
+}
