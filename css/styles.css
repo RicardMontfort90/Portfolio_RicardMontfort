@@ -160,7 +160,6 @@ body.dark {
 /*  prueba Iconos*/
 .icon {
     color: #ef0909; /* Color predeterminado */
-    font-size: 24px;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
@@ -171,7 +170,7 @@ body.dark {
 
 .fa-github {
     color: #ef0909; /* Color predeterminado */
-    font-size: 24px;
+    margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 .card__link:hover  .fa-github {
@@ -180,7 +179,7 @@ body.dark {
 
 .fa-linkedin {
     color: #ef0909; /* Color predeterminado */
-    font-size: 24px;
+    margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
