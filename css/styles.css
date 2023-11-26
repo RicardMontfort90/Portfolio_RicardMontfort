@@ -83,11 +83,12 @@ body.dark {
 }
 /* OK */
 .colors__item {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text-color);
+    width: 15px;
+    height: 15px;
+    border: 0px solid var(--text-color);
     background-color: var(--primary-color);
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .colors__item--blue {
@@ -164,31 +165,41 @@ body.dark {
 
 /*  prueba Iconos*/
 .icon {
-    color: #ef0909; /* Color predeterminado */
+    color: #7c7c7c; /* Color predeterminado */
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
 .card__link:hover .icon {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
 .fa-github {
-    color: #ef0909; /* Color predeterminado */
+    color: #7c7c7c; /* Color predeterminado */
     margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 .card__link:hover  .fa-github {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
 .fa-linkedin {
-    color: #ef0909; /* Color predeterminado */
+    color: #7c7c7c; /* Color predeterminado */
     margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
 .card__link:hover  .fa-linkedin {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
+}
+
+.fa-file-pdf {
+    color: #7c7c7c; /* Color predeterminado */
+    margin-right: 1em;
+    transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
+}
+
+.card__link:hover .fa-file-pdf {
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
 /* OK */
@@ -284,32 +295,27 @@ body.dark {
 .habilidades {
     padding-top: 0rem;
     margin-bottom: 0rem;
-    width: 300px;
 }
 
 
 @media (min-width: 768px) {
     .habilidades {
         margin-bottom: 1rem;
-        justify-items: center;  /*Centrar el contenido verticalmente en cada columna */
-        align-items: center;
     }
 } 
 
 
 .contenedor-skill {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 4rem;
     margin: auto; /* Centrar el contenedor */
-    max-width: 600px;  /* Ajustar el ancho máximo del contenedor según sea necesario */
-    justify-items: center; /* Centrar el contenido verticalmente en cada columna  */
-    align-items: center; 
+    justify-content: space-around;
+    padding: 0.5rem;
 }
 
 
 .contenedor-skill img {
-    width: 3rem;
+    width: 7rem;
     height: auto;
     margin: 0.5rem;
 }
@@ -384,11 +390,19 @@ body.dark {
     text-align: center;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    transition: color 0.3s ease;
+}
+
+.button:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px 5px var(--primary-color); /* Agrega una sombra para el efecto luminoso */
 }
 
 .button--primary {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
