@@ -146,6 +146,11 @@ body.dark {
     margin: 0;
     margin-bottom: 1rem;
     font-size: 1.2rem;
+    transition: text-shadow 0.3s ease; /* Agregamos una transición para suavizar el efecto */
+}
+
+.card__title:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efecto de luz con sombra blanca */
 }
 /* OK */
 .card__subtitle {
@@ -157,41 +162,39 @@ body.dark {
     margin-bottom: 0.5em;
 }
 
-/*  prueba Iconos*/
+/*  prueba Iconos */
 .icon {
-    color: #ef0909; /* Color predeterminado */
+    color: #a1a1a1; /* Color predeterminado */
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
 .card__link:hover .icon {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
-
 .fa-github {
-    color: #ef0909; /* Color predeterminado */
+    color: #a1a1a1; /* Color predeterminado */
     margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 .card__link:hover  .fa-github {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
 .fa-linkedin {
-    color: #ef0909; /* Color predeterminado */
+    color: #a1a1a1; /* Color predeterminado */
     margin-right: 1em;
     transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
 }
 
 .card__link:hover  .fa-linkedin {
-    color: #ff5733; /* Nuevo color al pasar el ratón por encima */
+    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
 }
 
 /* OK */
 .card__text {
     font-size: 0.9rem;
     line-height: 1.6;
-    
 }
 /* OK */
 .skills {
@@ -274,6 +277,51 @@ body.dark {
 .skills__bar--10::after {
     --skills-bar-length:10%;
 }
+
+
+/*  PRUEBAS CON LOGO EN OTHERS!!!   */
+
+.habilidades {
+    padding-top: 0rem;
+    margin-bottom: 0rem;
+    width: 250px;
+}
+
+
+@media (min-width: 768px) {
+    .habilidades {
+        margin-bottom: 1rem;
+    }
+} 
+
+
+.contenedor-skill {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin: auto; /* Centrar el contenedor */
+    max-width: 600px;  /* Ajustar el ancho máximo del contenedor según sea necesario */
+    justify-content: center; /* Centrar el contenido verticalmente en cada columna  */
+    align-items: center; 
+}
+
+.contenedor-skill picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+
+.contenedor-skill img {
+    width: 3rem;
+    height: auto;
+    margin: auto; 
+}
+
+
+/*  PRUEBAS CON LOGO EN OTHERS!!! */  
+
 /*  OK */
 .experience {
     display: flex;
@@ -341,11 +389,19 @@ body.dark {
     text-align: center;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    transition: color 1s ease;
+}
+
+.button:hover {
+    color: var(--bg-color);
+    background-color:var(--primary-color) ;
+    box-shadow: 0 0 0px 2px ; /* Agrega una sombra para el efecto luminoso */
 }
 
 .button--primary {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
+    background-color:transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
@@ -418,4 +474,8 @@ body.dark {
 */
 
 
+.projects__title  {
+    text-align: center;
+    justify-items: center;
+}
 
