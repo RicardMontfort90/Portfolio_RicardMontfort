@@ -50,6 +50,38 @@ body.dark {
     background-color: var(--bg-card-color);
     transition: var(--transition);
 }
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
 /* OK */
 .switches {
     display: flex;
@@ -190,54 +222,83 @@ body.dark {
     opacity: 0.8;
 }
 /*  OK */
-.card__link {
-    margin-bottom: 0.5em;
-}
 
-/*  prueba Iconos*/
-.icon {
-    color: #7c7c7c; /* Color predeterminado */
-    transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
-}
 
-.card__link:hover .icon {
-    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
-}
 
-.fa-github {
-    color: #7c7c7c; /* Color predeterminado */
+.card__links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+    justify-content: space-around;
+  }
+  
+  .card__links li {
+    display: inline-block;
+  }
+  .icon {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+  }
+  
+  .fa-github {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
     margin-right: 1em;
-    transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
-}
-.card__link:hover  .fa-github {
-    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
-}
-
-.fa-linkedin {
-    color: #7c7c7c; /* Color predeterminado */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+  }
+  
+  .fa-linkedin {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
     margin-right: 1em;
-    transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
-}
-
-.card__link:hover  .fa-linkedin {
-    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
-}
-
-.fa-file-pdf {
-    color: #7c7c7c; /* Color predeterminado */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+  }
+  
+  .fa-file-pdf {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
     margin-right: 1em;
-    transition: color 0.3s ease; /* Transición de color en 0.3 segundos */
-}
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+  }
+  
+  /* Aplicar estilos de hover a cada ícono individualmente */
+  .card__links li:hover .icon {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+  }
+  
+  .card__links li:hover .fa-github {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+  }
+  
+  .card__links li:hover .fa-linkedin {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+  }
+  
+  .card__links li:hover .fa-file-pdf {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+  }
+  
 
-.card__link:hover .fa-file-pdf {
-    color: var(--primary-color); /* Nuevo color al pasar el ratón por encima */
-}
+
 
 /* OK */
 .card__text {
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+
+.card__text::selection {
+    background-color: var(--primary-color); /* Cambia el color a tu preferencia */
+    color: #000; /* Cambia el color del texto seleccionado si es necesario */
+  }
+
 /* OK */
 .skills {
     padding: 1em 0;
