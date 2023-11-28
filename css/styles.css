@@ -12,6 +12,7 @@
 /*  OK */
 * {
     box-sizing: border-box;
+    
 }
 /* OK */
 a {
@@ -32,6 +33,7 @@ body {
     transition: var(--transition);
     font-family: 'Open Sans', sans-serif;
 }
+
 
 /* OK */
 body.dark {
@@ -179,6 +181,62 @@ body.dark {
     
 }
 
+
+
+.photo {
+    position: relative;
+    display: block;
+  }
+  
+  .photo img {
+    object-fit: cover;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+    display: block;
+    transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+ 
+  }
+  
+  .photo:hover img {
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+  }
+  
+  .photo .glow-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+  }
+  
+  .photo .glow {
+    display: block;
+    position:absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,.2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .photo:hover .glow {
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .photo:hover img,
+  .photo:hover .glow-wrap {
+    margin-top: 0;
+  }
+
+
+
+
+
+
+
 .card--project{
   object-fit: cover;
   box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
@@ -284,8 +342,6 @@ body.dark {
     font-size: 1.6em; /* Tamaño al pasar el ratón */
   }
   
-
-
 
 /* OK */
 .card__text {
@@ -519,6 +575,49 @@ body.dark {
         transform: translateX(var(--skills-bar-length));
     }
 }
+
+
+.card__title {
+    text-align: center;
+  }
+  
+  .client__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ale {
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .client__name,
+  .client__position {
+    margin: 10px 0;
+  }
+  
+  .testimonial {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+  }
+  
+  .client__review {
+    text-align: center;
+  }
+
+
+
+
+
 
 /*========MEDIA QUERYS MEDIUM =========*/
 
