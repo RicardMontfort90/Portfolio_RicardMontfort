@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --primary-color: hsl(214, 87%, 56%); 
+    --primary-color: hsl(46, 84%, 56%); 
     --text-color: hsl(0, 0%, 31%);
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color: hsl(0, 0%, 98%);
@@ -92,15 +92,15 @@ body.dark {
 }
 
 .colors__item--blue {
-    --primary-color: hsl(214, 87%, 56%);
+    --primary-color: rgb(29, 99, 255);
 }
 
 .colors__item--green {
-    --primary-color: hsl(150, 84%, 56%);
+    --primary-color: rgb( 74, 209, 134);
 }
 
 .colors__item--purple {
-    --primary-color: hsl(276, 84%, 56%);
+    --primary-color: rgb(109, 16, 245);
 }
 
 .colors__item--orange {
@@ -133,11 +133,42 @@ body.dark {
     border-radius: var(--border-radius);
 }
 /* OK */
-.card__image-container {
-    min-width: 320px;
+
+
+
+.card__image-container{
+    min-width: 295px;
     border-radius: var(--border-radius);
     overflow: hidden; 
 }
+
+.card__image-container img{
+    border: 3px solid rgba(89, 89, 89, 0.879);
+    
+}
+
+.card--project{
+  object-fit: cover;
+  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+  display: block;
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: 10px;
+}
+
+.card--project:hover {
+  box-shadow: 1px 1px 20px 5px rgba(89, 89, 89, 0.879);
+}
+
+.card--project:hover .glow{
+  transform: rotate(45deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.card--project:hover,
+.card--project:hover .glow-wrap{
+  margin-top: 0;
+}
+
 /* OK */
 .card__header {
     padding: 1em 0;
@@ -314,6 +345,8 @@ body.dark {
 }
 
 
+
+
 .contenedor-skill img {
     width: 7rem;
     height: auto;
@@ -390,13 +423,13 @@ body.dark {
     text-align: center;
     border-radius: var(--border-radius);
     transition: var(--transition);
-    transition: color 0.3s ease;
+    transition: 1s ease;
 }
 
 .button:hover {
     color: var(--bg-color);
     background-color: var(--primary-color);
-    box-shadow: 0 0 10px 5px var(--primary-color); /* Agrega una sombra para el efecto luminoso */
+    box-shadow: 0 0 10px 1px var(--primary-color); /* Agrega una sombra para el efecto luminoso */
 }
 
 .button--primary {
@@ -435,13 +468,18 @@ body.dark {
     }
 }
 /*  OK VIDEO 3 */
-@media screen and (min-width:720px) {
+
+
+@media screen and (min-width:760px) {
     .column--right{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, min-content);
-        align-items: start; /* Moldea las columnas de front,back and others*/
+        
     }
 }
+
+
+
 /* OK VIDEO 4 */
 @media screen and (min-width: 760px) {
     .card--project {
@@ -473,6 +511,3 @@ body.dark {
 }
 
 */
-
-
-
