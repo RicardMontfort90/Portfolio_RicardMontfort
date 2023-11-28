@@ -592,7 +592,8 @@ body.dark {
   
   .ale {
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
     width: 300px;
     height: 300px;
     object-fit: cover;
