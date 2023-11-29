@@ -360,15 +360,10 @@ body.dark {
     padding: 1em 0;
 }
 /* OK */ 
-.skills__header {
-    display: flex;
-    justify-content: space-between;
-    width: 175px;
-    margin-left: auto;
-}
+
 /* OK */
 .skills__tech {
-    margin: 0;
+    margin: 5px;
     font-size: 0.8rem;
 }
 /* OK */
@@ -381,7 +376,7 @@ body.dark {
 .skills__bar,
 .skills__bar::after {
     position: relative;
-    width: 175px;
+    width: 275px;
     height: 8px;
     background-color: #888;
     border-radius: var(--border-radius);
@@ -391,7 +386,7 @@ body.dark {
 .skills__bar::after {
     content:"";
     position: absolute;
-    left: -175px;
+    left: -275px;
     background-color: var(--primary-color);
     transition: var(--transition);
     animation: skills-bar-fill 2s ease-in-out forwards;
@@ -451,6 +446,7 @@ body.dark {
         margin-bottom: 1rem;
     }
 } 
+
 
 
 .contenedor-skill {
@@ -594,8 +590,8 @@ body.dark {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     transition: var(--transition);
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
   }
   
@@ -631,6 +627,7 @@ body.dark {
 /*  OK VIDEO 3 */
 
 
+
 @media screen and (min-width:760px) {
     .column--right{
         grid-template-columns: repeat(3, 1fr);
@@ -663,12 +660,17 @@ body.dark {
         font-size: 0.8rem;
     }
 }
-/*
-@media screen and (min-width: 760px) {
-    .buttons {
-        position: absolute;
-        bottom: 1em;
+
+/* esto lo añadio el patito y asi me parece que todos los moviles estan bien! */
+@media screen and (max-width: 760px) {
+    .main {   
+    padding: 1em;
     }
 }
 
-*/
+@media screen and (max-width: 300px) {
+    .column--left {   
+    padding: 1em;
+    }
+}
+
