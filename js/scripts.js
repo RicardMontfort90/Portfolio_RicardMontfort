@@ -54,4 +54,21 @@ function closeModal() {
   document.getElementById('myModal').style.display = 'none';
 }
 
+/*
+ Event for buttons sound 
+  document.addEventListener('DOMContentLoaded', function () {
+    let clickSound = document.getElementById('clickSound');
 
+    function playClickSound() {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    }
+
+    let button__ghost = document.querySelectorAll('.button');
+
+    button__ghost.forEach(function (button) {
+      button.addEventListener('click', playClickSound);
+    });
+  });
+
+*/

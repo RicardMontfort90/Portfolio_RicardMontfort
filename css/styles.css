@@ -10,24 +10,28 @@
     --skills-bar-length: 0%;
     --palette-color: linear-gradient(to right, hsl(46, 84%, 56%), hsl(46, 67%, 43%), hsl(46, 65%, 30%));
 }
-/*  OK */
+
 * {
     box-sizing: border-box;
     
 }
-/* OK */
+
 a {
     color: var(--primary-color);
     text-decoration: none;
     
 }
 
-/* OK */
 img {
     max-width: 100%;
     display: block; 
 }
-/*  OK */
+
+::selection {
+    background-color: var(--primary-color) !important;
+    color: #000 !important;
+}
+
 body {
     margin: 0;
     background-color: var(--bg-color);
@@ -36,15 +40,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
-/* OK */
 body.dark {
     --text-color: hsl(0, 0%, 83%);
     --bg-color: hsl(0, 0%, 15%);
     --bg-card-color: hsl(0, 0%, 20%);
 }
 
-/*  OK  */
 .header {
     display: flex;
     align-items: center;
@@ -54,7 +55,6 @@ body.dark {
     background-color: var(--bg-card-color);
     transition: var(--transition);
 }
-
 
 .tooltip {
     position: relative;
@@ -83,33 +83,29 @@ body.dark {
     opacity: 1;
 }
 
-
-
-
-/* OK */
 .switches {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* OK */
+
 .toggle-theme {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-/* OK */
+
 .toggle-theme__icon {
     margin-right: 0.5em;
     width: 20px;
 }
-/* OK */
+
 .toggle-theme__text {
     font-size: 0.8rem;
 }
 
-/* OK */
+
 .colors {
     display: flex;
     justify-content: space-between;
@@ -117,7 +113,7 @@ body.dark {
     height: 20px;
     width: 100px;
 }
-/* OK */
+
 .colors__item {
     width: 15px;
     height: 15px;
@@ -146,35 +142,29 @@ body.dark {
     --primary-color: hsl(46, 84%, 56%);
     --palette-color: linear-gradient(to right, hsl(46, 84%, 56%), hsl(46, 67%, 43%), hsl(46, 65%, 30%));
 }
-/* OK */
+
 .title {
     text-align: center;
     color: var(--primary-color);
     transition: var(--transition);
 }
 
-/* OK */
 .main {
     display: grid;
     padding: 2em;
     gap: 0.5em;
 }
 
-/* OK */
 .column {
     display: grid;
     gap: 0.5em;
 }
 
-/*  OK  */
 .card {
     padding: 1em;
     background-color: var(--bg-card-color);
     border-radius: var(--border-radius);
 }
-/* OK */
-
-
 
 .card__image-container{
     min-width: 295px;
@@ -198,16 +188,18 @@ body.dark {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 50%;
+    height: 100%;
     max-width: 700px;
-  }
-  
-  .close {
+    top: 50%;
+}
+
+.close {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -215,37 +207,34 @@ body.dark {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-  }
-
-
+}
 
 .photo {
     position: relative;
     display: block;
-  }
-  
-  .photo img {
+}
+
+.photo img {
     object-fit: cover;
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
     display: block;
     transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
- 
-  }
-  
-  .photo:hover img {
+}
+
+.photo:hover img {
     box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
-  }
-  
-  .photo .glow-wrap {
+}
+
+.photo .glow-wrap {
     overflow: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     margin-top: -10px;
-  }
-  
-  .photo .glow {
+}
+
+.photo .glow {
     display: block;
     position:absolute;
     width: 40%;
@@ -255,51 +244,44 @@ body.dark {
     filter: blur(5px);
     transform: rotate(45deg) translate(-450%, 0);
     transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  
-  .photo:hover .glow {
+}
+
+.photo:hover .glow {
     transform: rotate(45deg) translate(450%, 0);
     transition: all 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  
-  .photo:hover img,
-  .photo:hover .glow-wrap {
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap {
     margin-top: 0;
-  }
-
-
-
-
-
-
+}
 
 .card--project{
-  object-fit: cover;
-  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-  display: block;
-  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  margin-top: 10px;
+object-fit: cover;
+box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+display: block;
+transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+margin-top: 10px;
 }
 
 .card--project:hover {
-  box-shadow: 1px 1px 20px 5px rgba(89, 89, 89, 0.879);
+box-shadow: 1px 1px 20px 5px rgba(89, 89, 89, 0.879);
 }
 
 .card--project:hover .glow{
-  transform: rotate(45deg) translate(450%, 0);
-  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+transform: rotate(45deg) translate(450%, 0);
+transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .card--project:hover,
 .card--project:hover .glow-wrap{
-  margin-top: 0;
+margin-top: 0;
 }
 
-/* OK */
 .card__header {
     padding: 1em 0;
 }
-/* OK */
+
 .card__title {
     margin: 0;
     margin-bottom: 1rem;
@@ -310,111 +292,96 @@ body.dark {
 .card__title:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efecto de luz con sombra blanca */
 }
-/* OK */
+
 .card__subtitle {
     text-align: center;
-  }
-  
-  .card__subtitle a {
+}
+
+.card__subtitle a {
     display: inline-block;
     vertical-align: middle;
     line-height: 1; /* Ajusta este valor según sea necesario */
-  }
-  
-/*  OK */
-
-
+}
 
 .card__links {
     list-style: none;
     padding: 0;
     display: flex;
-
     justify-content: space-around;
-  }
-  
-  .card__links li {
-    display: inline-block;
-  }
-  .icon {
-    font-size: 1.5em; /* Tamaño predeterminado */
-    color: #7c7c7c;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
-  }
-  
-  .fa-github {
-    font-size: 1.5em; /* Tamaño predeterminado */
-    color: #7c7c7c;
-    margin-right: 1em;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
-  }
-  
-  .fa-linkedin {
-    font-size: 1.5em; /* Tamaño predeterminado */
-    color: #7c7c7c;
-    margin-right: 1em;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
-  }
-  
-  .fa-file-pdf {
-    font-size: 1.5em; /* Tamaño predeterminado */
-    color: #7c7c7c;
-    margin-right: 1em;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
-  }
-  
-  /* Aplicar estilos de hover a cada ícono individualmente */
-  .card__links li:hover .icon {
-    color: var(--primary-color);
-    font-size: 1.6em; /* Tamaño al pasar el ratón */
-  }
-  
-  .card__links li:hover .fa-github {
-    color: var(--primary-color);
-    font-size: 1.6em; /* Tamaño al pasar el ratón */
-  }
-  
-  .card__links li:hover .fa-linkedin {
-    color: var(--primary-color);
-    font-size: 1.6em; /* Tamaño al pasar el ratón */
-  }
-  
-  .card__links li:hover .fa-file-pdf {
-    color: var(--primary-color);
-    font-size: 1.6em; /* Tamaño al pasar el ratón */
-  }
-  
+}
 
-/* OK */
+.card__links li {
+    display: inline-block;
+}
+.icon {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+}
+
+.fa-github {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
+    margin-right: 1em;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+}
+
+.fa-linkedin {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
+    margin-right: 1em;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+}
+
+.fa-file-pdf {
+    font-size: 1.5em; /* Tamaño predeterminado */
+    color: #7c7c7c;
+    margin-right: 1em;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Añadimos la transición para el cambio de tamaño */
+}
+
+
+  /* Aplicar estilos de hover a cada ícono individualmente */
+.card__links li:hover .icon {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+}
+
+.card__links li:hover .fa-github {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+}
+
+.card__links li:hover .fa-linkedin {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+}
+
+.card__links li:hover .fa-file-pdf {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Tamaño al pasar el ratón */
+}
+
 .card__text {
     font-size: 0.9rem;
     line-height: 1.6;
 }
 
-
-.card__text::selection {
-    background-color: var(--primary-color); /* Cambia el color a tu preferencia */
-    color: #000; /* Cambia el color del texto seleccionado si es necesario */
-  }
-
-/* OK */
 .skills {
     padding: 1em 0;
 }
-/* OK */ 
 
-/* OK */
 .skills__tech {
     margin: 5px;
     font-size: 0.8rem;
 }
-/* OK */
+
 .skills__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-/* OK */
+
 .skills__bar,
 .skills__bar::after {
     position: relative;
@@ -424,7 +391,7 @@ body.dark {
     border-radius: var(--border-radius);
     overflow: hidden;
 }
-/*  OK */
+
 .skills__bar::after {
     content:"";
     position: absolute;
@@ -474,22 +441,17 @@ body.dark {
     --skills-bar-length:10%;
 }
 
-
 /*  PRUEBAS CON LOGO EN OTHERS!!!   */
-
 .habilidades {
     padding-top: 0rem;
     margin-bottom: 0rem;
 }
-
 
 @media (min-width: 768px) {
     .habilidades {
         margin-bottom: 1rem;
     }
 } 
-
-
 
 .contenedor-skill {
     display: flex;
@@ -499,19 +461,13 @@ body.dark {
     padding: 0.5rem;
 }
 
-
-
-
 .contenedor-skill img {
     width: 7rem;
     height: auto;
     margin: 0.5rem;
 }
 
-
 /*  PRUEBAS CON LOGO EN OTHERS!!! */  
-
-/*  OK */
 .experience {
     display: flex;
     align-items: start;
@@ -521,34 +477,33 @@ body.dark {
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
-/* OK */
+
 .experience__image {
     max-width: 15%;
     margin-right: 1em;
 }
-/* OK */
+
 .experience__time {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
-/* OK */
+
 .experience__job {
     margin: 0;
     margin-bottom: 0.5em;
     color: var(--primary-color);
     transition: var(--transition);
 }
-/* OK */
+
 .experience__description {
     font-size: .8rem;
     margin-bottom: 1.5rem;
 }
-/* OK */
+
 .project {
     position:relative;
 }
 
-/* OK */
 .project__tags {
     display: flex;
     justify-content: space-between;
@@ -557,21 +512,19 @@ body.dark {
     width: 275px;
 }
 
-/* OK */
 .project__tag {
     padding: 0.4em 0.8em;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     color: var(--bg-color);
 }
-/* OK */
+
 .buttons {
     display: flex;
     justify-content: space-between ;
     width: 225px;
 }
 
-/* OK */
 .button {
     width: 100px;
     line-height: 2.5;
@@ -593,69 +546,64 @@ body.dark {
     color: var(--primary-color);
 }
 
-
-.button--ghost {
+.button__ghost {
     background-color: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
+
 /* OK VIDEO 2 */
 .icon {
     margin-right: 1em;
 }
-/* OK */
+
 .no-margin {
     margin: 0;
 }
-/*  OK */
+
 @keyframes skills-bar-fill {
     to {
         transform: translateX(var(--skills-bar-length));
     }
 }
 
-
 .card__title {
     text-align: center;
-  }
-  
-  .client__info {
+}
+
+.client__info {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-  }
-  
-  .ale {
+}
+
+.ale {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     transition: var(--transition);
     width: 150px;
     height: 150px;
     object-fit: cover;
-  }
-  
-  .client__name,
-  .client__position {
+}
+
+.client__name,
+.client__position {
     margin: 10px 0;
-  }
-  
-  .testimonial {
+}
+
+.testimonial {
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
-  }
-  
-  .client__review {
+}
+
+.client__review {
     text-align: center;
-  }
-
-
-
-
+}
 
 
 /*========MEDIA QUERYS MEDIUM =========*/
@@ -667,9 +615,6 @@ body.dark {
     }
 }
 /*  OK VIDEO 3 */
-
-
-
 @media screen and (min-width:760px) {
     .column--right{
         grid-template-columns: repeat(3, 1fr);
@@ -677,8 +622,6 @@ body.dark {
         
     }
 }
-
-
 
 /* OK VIDEO 4 */
 @media screen and (min-width: 760px) {

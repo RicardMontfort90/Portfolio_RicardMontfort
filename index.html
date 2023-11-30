@@ -40,13 +40,10 @@
           <div class="card__image-container">
             <img src="assets/images/profile.jpg" alt="Perfil photo" class="gallery-image" onclick="openModal()">
           </div>
-          <!-- proving closeModal for perfil photo -->
           <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
             <img src="assets/images/profile.jpg" alt="Perfil photo" class="modal-content">
           </div>
-
-
           <div class="card card__header">
             <h2 class="card__title no no-margin">Ricard Montfort Romero</h2>
             <p class="card__subtitle"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=2000&pause=3000&color=1DF755&center=true&random=false&width=360&height=40&lines=Full+Stack+web+developer;Always+keep+learning+%F0%9F%92%BB" alt="Typing SVG" /></a></p>
@@ -251,7 +248,7 @@
             </p>
             <div class="buttons">
               <a href="https://cobrain.netlify.app/" class="button button--primary">Demo</a>
-              <a href="https://github.com/RicardMontfort90/frontend-CoBrain" class="button button--ghost">GitHub</a>
+              <a href="https://github.com/RicardMontfort90/frontend-CoBrain" class="button button__ghost">GitHub</a>
             </div>
           </div>
         </article>
@@ -290,7 +287,7 @@
             </p>
             <div class="buttons">
               <a href="https://mytone.fly.dev/" class="button button--primary">Demo</a>
-              <a href="https://github.com/Module2-project-ironhack-MyTONE/MyTONE" class="button button--ghost">GitHub</a>
+              <a href="https://github.com/Module2-project-ironhack-MyTONE/MyTONE" class="button button__ghost">GitHub</a>
             </div>
           </div>
         </article>
@@ -317,10 +314,11 @@
             </p>
             <div class="buttons">
               <a href="https://ricardmontfort90.github.io/The-Force/" class="button button--primary">Demo</a>
-              <a href="https://github.com/RicardMontfort90/The-Force" class="button button--ghost">GitHub</a>
+              <a href="https://github.com/RicardMontfort90/The-Force" class="button button__ghost">GitHub</a>
             </div>
           </div>
         </article>
+        
         <article class="card card--project">
           <h1 class="card__title"></h1>
           <div class="client__info">
@@ -332,7 +330,8 @@
               <h2 className="client__name">Alejandra Bausá</h2>
               <h3 className="client__position">Senior Software Developer | Lead Teacher at Ironhack</h3>
             </div>
-            <p>Ricard has been an incredible student, both at the intelectual and personal level. 
+            <p class="card__text">
+              Ricard has been an incredible student, both at the intelectual and personal level. 
               He is a hard-worker with impeccable ethics, and has proven to be great as a team-player. 
               I am sure he would be a great asset in any dev team, because he will strive to accomodate the team and the work dynamics, 
               while learning as much as possible. Thank you for making it so easy to be your teacher, Ricard!
@@ -341,6 +340,11 @@
         </article>
       </section>
     </main>
+    <!-- sound efect buttons
+      <audio id="clickSound">
+          <source src="assets/sound/sable-laser-.mp3" type="audio/mp3">
+        </audio>
+    -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
