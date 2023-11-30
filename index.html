@@ -30,7 +30,7 @@
         
         <div data-color="rgb(109, 16, 245)" class="colors__item colors__item--purple"></div>
         
-        <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--orange"></div>
+        <div data-color="hsl(46, 84%, 56%)" class="colors__item colors__item--yellow"></div>
       </div>
     </header>
     <main class="main">
@@ -38,11 +38,18 @@
         <!-- PROFILE CARD-->
         <article class="card card--profile">
           <div class="card__image-container">
-            <img src="assets/images/profile.jpg" alt="">
+            <img src="assets/images/profile.jpg" alt="Perfil photo" class="gallery-image" onclick="openModal()">
           </div>
+          <!-- proving closeModal for perfil photo -->
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="assets/images/profile.jpg" alt="Perfil photo" class="modal-content">
+          </div>
+
+
           <div class="card card__header">
             <h2 class="card__title no no-margin">Ricard Montfort Romero</h2>
-            <p class="card__subtitle"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=sherif&pause=1000&color=39F71A&random=false&width=435&lines=Full+Stack+web+developer;Always+keep+learning+%F0%9F%92%BB" alt="Typing SVG" /></a></p>
+            <p class="card__subtitle"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=2000&pause=3000&color=1DF755&center=true&random=false&width=360&height=40&lines=Full+Stack+web+developer;Always+keep+learning+%F0%9F%92%BB" alt="Typing SVG" /></a></p>
           </div>
           <div class="card__body">
             <ul class="card__links">
@@ -184,11 +191,11 @@
               </picture>
               <picture>
                 <img src="/assets/images/tech/cypress.png" alt="icono postman"><br>
-                <img src="/assets/images/tech/express.png" alt="icono de express">
+                <img src="/assets/images/tech/express.png" alt="icono de Django">
               </picture>
               <picture>
                 <img src="/assets/images/tech/postman.png" alt="icono postman"><br>
-                <img src="/assets/images/tech/express.png" alt="icono de express">
+                <img src="/assets/images/tech/django.png" alt="icono de express">
               </picture>
             </div>
           </section>
