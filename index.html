@@ -38,10 +38,10 @@
         <!-- PROFILE CARD-->
         <article class="card card--profile">
           <div class="card__image-container">
-            <img src="assets/images/profile.jpg" alt="Perfil photo" class="gallery-image" onclick="openModal()">
+            <img src="assets/images/profile.jpg" alt="Perfil photo" class="gallery-image" onclick="openModal('myModal')">
           </div>
           <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal('myModal')">&times;</span>
             <img src="assets/images/profile.jpg" alt="Perfil photo" class="modal-content">
           </div>
           <div class="card card__header">
@@ -398,8 +398,12 @@
           <div class="client__info">
             <h1 class="card__title">Testimonials</h1>
             <div class="client__avatar">
-              <img src="/assets/images/ale.jpg" alt="Ale" class="ale" />
+              <img src="/assets/images/ale.jpg" alt="Ale" class="ale" onclick="openModal('ModalAle')" />
             </div>
+              <div id="ModalAle" class="modal">
+                <span class="close" onclick="closeModal('ModalAle')">&times;</span>
+                <img src="/assets/images/ale.jpg" alt="Ale" class="modal-content">
+              </div>
             <div class="client__details">
               <h2 className="client__name">Alejandra Bausá</h2>
               <h3 className="client__position">Senior Software Developer | Lead Teacher at Ironhack</h3>

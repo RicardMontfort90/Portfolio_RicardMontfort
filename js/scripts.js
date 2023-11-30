@@ -46,14 +46,13 @@ toggleColors.addEventListener("click", (e) => {
 
 
 /* Functions for open en close modal perfil photo */
-function openModal() {
-  document.getElementById('myModal').style.display = 'block';
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'block';
 }
 
-function closeModal() {
-  document.getElementById('myModal').style.display = 'none';
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
 }
-
 /*
  Event for buttons sound 
   document.addEventListener('DOMContentLoaded', function () {
