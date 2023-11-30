@@ -467,6 +467,11 @@ margin-top: 0;
     margin: 0.5rem;
 }
 
+.card__text__icon {
+    text-align: center;
+    margin: 0.5rem;
+}
+
 /*  PRUEBAS CON LOGO EN OTHERS!!! */  
 .experience {
     display: flex;
