@@ -661,7 +661,7 @@ margin-top: 0;
 /* esto lo añadio el patito y asi me parece que todos los moviles estan bien! */
 @media screen and (max-width: 760px) {
     .main {   
-    padding: 2em;
+    padding: 1em;
     }
 }
 
